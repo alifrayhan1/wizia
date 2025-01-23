@@ -39,12 +39,16 @@ function TestimonialCarousel() {
       (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
     );
   };
+  const handleDotClick = (index) => {
+    setActiveIndex(index);
+  };
 
   const currentTestimonial = testimonials[activeIndex];
 
   return (
     <>
-      <section className="flex justify-between">
+      <section>
+        <div  className="flex justify-between">
         <div className="flex justify-start items-center">
           <button
             onClick={handlePrev}
@@ -75,6 +79,16 @@ function TestimonialCarousel() {
             >
               <img src="rightArrow.svg" alt="" />
             </button>
+        </div>
+        </div>
+        <div className="flex space-x-4 justify-center">
+          {testimonials.map((testimonial, index) => (
+            <button
+              key={testimonial.id}
+              className={`h-2 w-2 rounded-full ${index === activeIndex ? 'bg-primary' : 'bg-gray-300'}`}
+              onClick={() => handleDotClick(index)}
+            ></button>
+          ))}
         </div>
       </section>
     </>
