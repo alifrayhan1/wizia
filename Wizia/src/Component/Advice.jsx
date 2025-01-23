@@ -39,6 +39,7 @@ function TestimonialCarousel() {
       (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
     );
   };
+
   const handleDotClick = (index) => {
     setActiveIndex(index);
   };
@@ -48,40 +49,39 @@ function TestimonialCarousel() {
   return (
     <>
       <section>
-        <div  className="flex justify-between">
-        <div className="flex justify-start items-center">
-          <button
-            onClick={handlePrev}
-            className="bg-[#114a55] rounded-xl ml-2 h-10 w-10 flex justify-center items-center"
-          >
-           <img src="leftArrow.svg" alt="" />
-          </button>
-        </div>
-        <div className="flex flex-col justify-center items-center space-y-5 p-10 sm:p-16">
-          <div className="bg-[#114a55] rounded-full h-12 w-12 flex items-center justify-center">
-            <img src="quote.svg" alt="" className="h-[50%]" />
+        <div className="flex justify-between">
+          <div className="flex justify-start items-center hidden md:flex">
+            <button
+              onClick={handlePrev}
+              className="bg-[#114a55] rounded-xl ml-2 h-10 w-10 flex justify-center items-center"
+            >
+              <img src="leftArrow.svg" alt="" />
+            </button>
           </div>
-          <p className="text-whiteShades w-2/3">{currentTestimonial.quote}</p>
-          <div className="text-center">
-            <h3 className="text-primary font-semibold text-lg">
-              {currentTestimonial.author}
-            </h3>
-            <p className="text-whiteShades text-xs">
-              {currentTestimonial.title} @ {currentTestimonial.company}
-            </p>
+          <div className="flex flex-col justify-center items-center space-y-5 p-10 sm:p-16">
+            <div className="bg-[#114a55] rounded-full h-12 w-12 flex items-center justify-center">
+              <img src="quote.svg" alt="" className="h-[50%]" />
+            </div>
+            <p className="text-whiteShades w-2/3">{currentTestimonial.quote}</p>
+            <div className="text-center">
+              <h3 className="text-primary font-semibold text-lg">
+                {currentTestimonial.author}
+              </h3>
+              <p className="text-whiteShades text-xs">
+                {currentTestimonial.title} @ {currentTestimonial.company}
+              </p>
+            </div>
           </div>
-          
-        </div>
-        <div className="flex justify-end items-center">
-        <button
+          <div className="flex justify-end items-center hidden md:flex">
+            <button
               onClick={handleNext}
-               className="bg-[#114a55] rounded-xl mr-2 h-10 w-10 flex justify-center items-center"
+              className="bg-[#114a55] rounded-xl mr-2 h-10 w-10 flex justify-center items-center"
             >
               <img src="rightArrow.svg" alt="" />
             </button>
+          </div>
         </div>
-        </div>
-        <div className="flex space-x-4 justify-center">
+        <div className="flex space-x-4 justify-center mt-4">
           {testimonials.map((testimonial, index) => (
             <button
               key={testimonial.id}
@@ -96,3 +96,4 @@ function TestimonialCarousel() {
 }
 
 export default TestimonialCarousel;
+
