@@ -5,9 +5,9 @@ function Footer() {
 
   return (
     <>
-      <section className="text-white p-8">
+      <section className="text-white px-8 py-5 bg-[#002228]">
         <div className='container mx-auto flex flex-col sm:flex-row justify-between items-center'>
-          <img src="Logo.png" alt="Company Logo" className='mb-4 sm:mb-0' />
+          <img src="footerLogo.svg" alt="Company Logo" className='mb-4 sm:mb-0' />
           <p>Copyright © {currentYear} Wizia. All rights reserved.</p>
         </div>
       </section>
