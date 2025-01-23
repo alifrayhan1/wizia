@@ -27,7 +27,7 @@ const testimonials = [
   },
 ];
 
-function TestimonialCarousel() {
+function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
@@ -62,7 +62,7 @@ function TestimonialCarousel() {
             <div className="bg-[#114a55] rounded-full h-12 w-12 flex items-center justify-center">
               <img src="quote.svg" alt="" className="h-[50%]" />
             </div>
-            <p className="text-whiteShades w-2/3">{currentTestimonial.quote}</p>
+            <p className="text-whiteShades w-2/3 text-xl">{currentTestimonial.quote}</p>
             <div className="text-center">
               <h3 className="text-primary font-semibold text-lg">
                 {currentTestimonial.author}
@@ -95,5 +95,5 @@ function TestimonialCarousel() {
   );
 }
 
-export default TestimonialCarousel;
+export default Carousel;
 
