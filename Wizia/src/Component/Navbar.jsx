@@ -25,38 +25,22 @@ export default function NavbarArea() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="border-b-[1px] border-teal-900">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="border-b border-teal-900">
       <NavbarContent>
         <NavbarBrand>
-          <img src={logo} alt="" />
+          <img src={logo} alt="Logo" className="h-6 w-auto" />
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-2 text-white" justify="center">
-        <NavbarItem>
-          <Link href="#">
-            About Us
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem>
-          <Link href="#">
-            Pricing
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link aria-current="page" href="#">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="#">
-            Solutions
-          </Link>
-        </NavbarItem>
+        {menuItems.slice(0, 4).map((item, index) => (
+          <NavbarItem key={index}>
+            <Link href="#" className="text-white">{item}</Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarContent justify="end" className="hidden sm:flex gap-1">
-        <NavbarItem className="lg:flex">
+        <NavbarItem>
           <Button
             as={Link}
             className="rounded-full bg-primary"
@@ -67,7 +51,7 @@ export default function NavbarArea() {
             Book a Demo
           </Button>
         </NavbarItem>
-        <NavbarItem className="">
+        <NavbarItem>
           <Button
             as={Link}
             className="text-white rounded-full border-2"
@@ -81,19 +65,8 @@ export default function NavbarArea() {
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`} className="text-white">
-            <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href="#"
-              size="lg"
-            >
+          <NavbarMenuItem key={index} className="text-white">
+            <Link className="w-full text-white" href="#">
               {item}
             </Link>
           </NavbarMenuItem>
