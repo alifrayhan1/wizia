@@ -1,5 +1,5 @@
 import "./App.css";
-import Carousel from "./Component/Advice";
+import Carousel from "./Component/Advice"; 
 import Bannar from "./Component/Bannar";
 import Effort from "./Component/Effort";
 import Features from "./Component/Features";
