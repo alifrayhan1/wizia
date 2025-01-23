@@ -12,19 +12,19 @@ const Prefer = () => {
   return (
     <section className="m-5 px-5 py-10 sm:px-16 sm:py-16 bg-[url('Prefer.svg')] bg-no-repeat bg-cover bg-center rounded-2xl">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-white text-xl sm:text-3xl font-semibold">
+        <h1 className="text-white text-2xl sm:text-4xl font-semibold">
           Train your aiDR on your...
         </h1>
-        <h1 className="text-primary italic text-xl sm:text-3xl font-semibold">
+        <h1 className="text-primary italic text-2xl sm:text-4xl font-semibold">
           preferred email stl
         </h1>
-        <p className="text-sm sm:text-base text-gray-300 mt-2">
+        <p className="text-base sm:text-lg text-gray-300 mt-2">
           You’re in control. Train your aiDR on elements of your Marketing
           strategy.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 text-gray-300">
           {listItems.map((column, columnIndex) => (
-            <div key={columnIndex} className="text-sm">
+            <div key={columnIndex} className="text-base sm:text-lg">
               <ul className="space-y-2">
                 {column.map((item, index) => (
                   <li key={index} className="flex items-center">
