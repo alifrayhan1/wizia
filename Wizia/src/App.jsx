@@ -3,6 +3,7 @@ import TestimonialCarousel from "./Component/Advice";
 import Bannar from "./Component/Bannar";
 import Effort from "./Component/Effort";
 import Features from "./Component/Features";
+import Footer from "./Component/Footer";
 import NavbarArea from "./Component/Navbar";
 import NewEra from "./Component/NewEra";
 import Partner from "./Component/Partner";
@@ -20,7 +21,7 @@ function App() {
         <TestimonialCarousel />
         <Effort/>
         <NewEra/>
-        
+        <Footer/>
       </main>
     </>
   );
