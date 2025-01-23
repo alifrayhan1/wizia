@@ -12,7 +12,7 @@ import Prefer from "./Component/Prefer";
 function App() {
   return (
     <>
-      <main>
+      
         <NavbarArea />
         <Bannar />
         <Partner />
@@ -22,7 +22,7 @@ function App() {
         <Effort/>
         <NewEra/>
         <Footer/>
-      </main>
+      
     </>
   );
 }
