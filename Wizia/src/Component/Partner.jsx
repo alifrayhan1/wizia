@@ -11,8 +11,8 @@ function Partner() {
 
   return (
     <>
-      <section>
-        <h1 className="text-xl sm:text-2xl text-secondary text-center mb-8">
+      <section className="py-5">
+        <h1 className="text-2xl sm:text-3xl font-semibold sm:font-bold text-secondary text-center mb-8">
           Our Trusted Partners
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-5 w-[70%] justify-items-center items-center mx-auto gap-4">
