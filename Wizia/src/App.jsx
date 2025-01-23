@@ -4,6 +4,7 @@ import Bannar from "./Component/Bannar";
 import Effort from "./Component/Effort";
 import Features from "./Component/Features";
 import NavbarArea from "./Component/Navbar";
+import NewEra from "./Component/NewEra";
 import Partner from "./Component/Partner";
 import Prefer from "./Component/Prefer";
 
@@ -18,6 +19,8 @@ function App() {
         <Prefer />
         <TestimonialCarousel />
         <Effort/>
+        <NewEra/>
+        
       </main>
     </>
   );
